@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OLX Demo</title>
+    <link rel="favimage" href="https://www.lowyat.net/wp-content/uploads/2023/07/Nothing-Phone-2-now-official-3.jpg">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h1 style=" display: flex; justify-content: center; text-decoration: underline;">OLX Demo</h1>
+   
+    
+        <div class="main">
+       <% for(product of products){ %> 
+        <div class="cards">
+            <img src="<%= product.iurl%>">
+            <h4><%= product.pname %></h4>
+            <h2>Rs. <%= product.pprice %>/-</h2>
+            <a href="http://localhost:3000/products/<%=product.id%>/edit">Edit</a>
+            <a href="http://localhost:3000/products/<%=product.id%>/details">More Details</a>
+           <form method="post" action="/products/<%=product.id %>?_method=DELETE">
+            <button>Delete</button>
+        </form>
+            
+        </div>
+    <% } %> 
+</div>
+    
+   
+    <form method="get" action="/products/new">
+        <div class="addbtn">
+        <button id="add">Add Product</button>
+    </div>
+    </form>
+
+</body>
+</html>
