@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -42,4 +43,50 @@
      
     
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Details</title>
+    <style>
+        div {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        img {
+           height: 40em;
+           width : fit-content;
+        }
+        span{
+            font-weight: 700;
+            text-decoration: underline;
+        }
+        button{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+<body>
+   <marquee><h1>................Product Details................</h1></marquee>
+   <br> <br>
+   <form method="get"  action="/products">
+    <button>Back to Home</button>
+ </form>
+   
+   <div>
+        <img src="<%= product.iurl%>">
+        <h2><%= product.pname%></h2>
+        <h1>Rs. <%= product.pprice%> /-</h1><br> <br>
+        <h3>Details:---</h3>
+        <p><span>Product Damages : </span><%= product.pinfo.pdamage%></p>
+        <p><span>Product Accessories : </span><%= product.pinfo.pacc%></p>
+        <p><span>Product Details : </span><%= product.pinfo.pdetails%></p>  
+     </div>
+     
+    
+</body>
+
 </html>

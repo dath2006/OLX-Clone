@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,4 +25,32 @@
     </form>
 
 </body>
+=======
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Product</title>
+</head>
+<body>
+    <h1> Add New Products Here</h1>
+    <form method="POST" action="/products/new">
+        <label >Image URL :</label>
+        <input type="text" name="iurl"><br> <br>
+        <label >Product Name :</label>
+        <input type="text"  name="pname"><br> <br>
+        <label >Product Price :</label>
+        <input type="text"  name="pprice"><br> <br>
+        <label >Product Damage :</label>
+        <input type="text" name="pdamage"><br> <br>
+        <label >Product Accessories :</label>
+        <input type="text"  name="pacc"><br> <br>
+        <label >Product details :</label>
+        <textarea rows="6" name="pdetails"></textarea><br> <br>
+        <button>Submit</button>
+    </form>
+
+</body>
+
 </html>
